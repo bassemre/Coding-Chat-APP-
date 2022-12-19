@@ -31,7 +31,7 @@ io.on("connection", (socket) => {
       new formatMessage(username, "Welcome to live chatCord app")
     );
     //B--)using broadcast.emit(to all client except that the user is connecting)
-    //the diiference between socket.broadcast.emit ,socket.emit -->
+    //the diference between socket.broadcast.emit ,socket.emit -->
     // broadcast.emit we actually emit to every body except thats connecting
     socket.broadcast
       .to(user.room) //to emit this broadcast to specific room(in the room contained the new user)

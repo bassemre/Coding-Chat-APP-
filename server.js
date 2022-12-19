@@ -6,11 +6,8 @@ const server = require("./app");
 const DB = process.env.DATABASE.replace(
   "<password>",
   process.env.DATABASE_PASSWORD
-); //get database string (to connect mongodb atlas to nodejs and express)and place holder password
+);
 
-//1st arg (connection string ) 2nd arg (some options for coneections)
-//mongoose.connect return promise
-//after promise resolved call back function at (then) will be excuted
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
